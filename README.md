@@ -7,4 +7,4 @@
 > This crons task in php allows to synchronize a private branch on github with your server.
 
 ## 🧱 Sources
-<a href="https://github.com/Oural1206/Sync-reposit-with-server/blob/main/main.php">main.php</a>
+<a href="https://github.com/Oural1206/Sync-reposit-with-server/blob/main/sync.php">sync.php</a>
