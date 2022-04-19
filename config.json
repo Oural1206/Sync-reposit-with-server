@@ -1,4 +1,6 @@
 {
     "username": "",
-    "token": ""
+    "token": "",
+    "repositoryName": "",
+    "discordWhebhook": ""
 }
