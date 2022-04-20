@@ -4,11 +4,13 @@ include("https://raw.githubusercontent.com/Oural1206/php-functions/main/allFunct
 function addElementTo($path, $listName) {
     $listName = $listName. "Elem";
     $path = "`$path`";
-    if ($GLOBALS[$listName] == "*null*") {
-        $GLOBALS[$listName] = "- $path";
-    } else {
-        $GLOBALS[$listName] = $GLOBALS[$listName]. "
-        - $path";
+    if (strlen($GLOBALS[$listName])+strlen($path)+3 <= 1024) {
+        if ($GLOBALS[$listName] == "*null*") {
+            $GLOBALS[$listName] = "- $path";
+        } else {
+            $GLOBALS[$listName] = $GLOBALS[$listName]. "
+            - $path";
+        }
     }
 }
 
