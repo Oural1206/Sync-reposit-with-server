@@ -69,7 +69,7 @@ function removeOverflow($path) {
 $configFile = file_get_contents("config.json");
 $config = json_decode($configFile, true);
 
-$link = "https://github.com/". $config["username"]. "/". $config["repositoryName"]. "/archive/refs/heads/main.zip";
+$link = "https://user:". $config["token"]. "@github.com/". $config["username"]. "/". $config["repositoryName"]. "/archive/refs/heads/". $config["branchName"]. ".zip";
 $file = file_put_contents("repository.zip", file_get_contents($link));
 $zip = new ZipArchive;
 $zip -> open("repository.zip");
@@ -77,7 +77,7 @@ $zip -> extractTo(".");
 $zip -> close();
 remove("repository.zip");
 
-$GLOBALS["repository"] = $config["repositoryName"]. "-main";
+$GLOBALS["repository"] = $config["repositoryName"]. "-". $config["branchName"];
 
 $GLOBALS["newElem"] = "*null*";
 $GLOBALS["modifiedElem"] = "*null*";
