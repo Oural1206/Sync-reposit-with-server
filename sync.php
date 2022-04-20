@@ -111,3 +111,4 @@ sendDiscordWhebhook($config["discordWhebhook"], [
         ]
     ]
 ]);
+?>
