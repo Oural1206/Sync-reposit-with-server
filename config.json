@@ -2,5 +2,6 @@
     "username": "",
     "token": "",
     "repositoryName": "",
+    "branchName": "",
     "discordWhebhook": ""
 }
